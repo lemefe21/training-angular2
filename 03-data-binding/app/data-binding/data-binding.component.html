@@ -2,7 +2,7 @@
 
   <article>
     <h3>Interpolation / Interpolação</h3>
-    <p>String renderizada com interpolation {{ url }}</p>
+    <p>String renderizada com interpolation para {{ url }}</p>
     <p>Resultado de 1 + 1 é {{ 1 + 1 }}</p>
     <p>Resultado de 1 + 1 não é {{ 1 + 1 + getValor() }}</p>
   </article>
@@ -93,32 +93,20 @@
     <article>
         <h3>Two-way data binding</h3>
         <div>
+            <input type="text" [value]="nome" (input)="nome = $event.target.value"/>
 
-            <input type="text"
-              [value]="nome"
-              (input)="nome = $event.target.value"
-            />
+            <input type="text" [ngModel]="nome" (ngModelChange)="nome = $event"/>
 
-            <input type="text"
-              [ngModel]="nome"
-              (ngModelChange)="nome = $event"
-            />
-
-            <input type="text"
-              [(ngModel)]="nome"
-            />
-
-            <input type="text"
-              bindon-ngModel="nome"
-            />
+            <input type="text" [(ngModel)]="nome"/>
+            <input type="text" bindon-ngModel="nome"/>
 
             <p>Você digitou {{ nome }}</p>
         </div>
 
         <div>
           Meu nome é {{ pessoa.nome }} e tenho {{ pessoa. idade }} anos de idade.
-          <input type="text" [(ngModel)]="pessoa.nome"  />
-          <input type="text" [(ngModel)]="pessoa.idade"  />
+          <input type="text" [(ngModel)]="pessoa.nome"/>
+          <input type="text" [(ngModel)]="pessoa.idade"/>
         </div>
     </article>
 </section>
@@ -129,8 +117,10 @@
     <h3>Input/Output Properties</h3>
 
     <curso [nome]="nomeCurso"></curso>
+    <br>
+    <curso nome="nomeCurso"></curso>
 
-    <contador [valor]="valorInicial"
-      (mudouValor)="onValorMudou($event)"></contador>
+    <contador [valor]="valorInicial" (mudouValor)="onValorMudou($event)"></contador>
   </article>
+
 </section>

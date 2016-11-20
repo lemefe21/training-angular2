@@ -10,8 +10,9 @@ import { Component, Input } from '@angular/core';
 export class InputPropertyComponent {
 
   @Input('nome') nomeCurso : string = '';
+  //[nome] passa a ser utilizado como atributo do componente
 
-  constructor() {  }
-
+  constructor() {
+  }
 
 }

@@ -21,7 +21,7 @@ import { Component } from '@angular/core';
 export class DataBindingComponent {
   constructor() {  }
 
-  url = 'http://loiane.com';
+  url = 'http://lemefe21.com';
   urlImg = 'http://lorempixel.com/400/200/nature/';
 
   conteudoAtual : string = '';

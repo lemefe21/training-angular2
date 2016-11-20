@@ -8,10 +8,10 @@ import { DataBindingComponent } from './data-binding.component';
 
 @NgModule({
     imports: [ CommonModule, FormsModule ],
-    declarations: [
-        DataBindingComponent,
-        InputPropertyComponent,
+    declarations: [ //directives
+        DataBindingComponent, //exemplo-data-binding
+        InputPropertyComponent, //curso
         OutputPropertyComponent ], //directives
-    exports: [ DataBindingComponent ] //expôe/faz o export do componente
+    exports: [ DataBindingComponent ] //expôe/faz o export do componente principal
 })
 export class DataBindingModule { }

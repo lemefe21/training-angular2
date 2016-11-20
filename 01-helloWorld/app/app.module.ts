@@ -1,3 +1,4 @@
+//arquivo criado para versão RC5
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
